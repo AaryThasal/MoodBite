@@ -26,7 +26,7 @@ function ResultsView({
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#f1f5f9'
+            backgroundColor: '#f8fafc'
         },
         header: {
             flexShrink: 0,
@@ -104,7 +104,7 @@ function ResultsView({
             backgroundColor: '#fffbeb',
             borderTop: '1px solid #fef3c7',
             fontSize: '0.875rem',
-            color: '#b45309'
+            color: '#d97706'
         },
         main: {
             flex: 1,
@@ -130,7 +130,7 @@ function ResultsView({
         mapPanel: {
             flex: 1,
             padding: '20px',
-            backgroundColor: '#f1f5f9'
+            backgroundColor: '#f8fafc'
         },
         mapContainer: {
             height: '100%',

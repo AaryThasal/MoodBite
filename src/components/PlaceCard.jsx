@@ -72,7 +72,7 @@ function PlaceCard({ place, isSelected, onClick, index }) {
             flexShrink: 0,
             fontSize: '0.875rem',
             fontWeight: '700',
-            color: '#0d9488'
+            color: '#d97706'
         }
     };
 

@@ -47,7 +47,7 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
     const styles = {
         container: {
             minHeight: '100vh',
-            background: 'linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #fef3c7 100%)',
+            background: 'linear-gradient(135deg, #f1f5f9 0%, #f8fafc 50%, #f0fdfa 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
