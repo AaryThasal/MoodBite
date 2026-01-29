@@ -1,7 +1,6 @@
 # 🍽️ MoodBite — Mood-Based Nearby Food Recommender
 
-MoodBite is a frontend web application that helps users quickly discover nearby food places based on their **current mood and context**, without overwhelming them with unnecessary information like reviews or complex filters.
-
+MoodBite is a frontend web application that helps users quickly discover nearby food places based on their **current mood and context**
 ---
 
 ## ✨ Features
