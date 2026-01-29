@@ -1,6 +1,4 @@
-/**
- * Place card - Scannable, clickable, with clear hierarchy
- */
+// Single place card showing name, type, cuisine and distance
 import { formatDistance } from '../utils/distance';
 import { getPlaceTypeLabel } from '../services/placeFilter';
 

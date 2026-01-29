@@ -1,9 +1,6 @@
-/**
- * Mood configuration defining search parameters for each mood.
- * Each mood has default radius, OSM tags, fallback tags, and distance options.
- */
+// Mood settings with search tags, radius, and display info
 
-// Available distance options for user selection (in meters)
+// Distance dropdown options
 export const DISTANCE_OPTIONS = [
     { value: 500, label: '500 m' },
     { value: 1000, label: '1 km' },
@@ -19,9 +16,7 @@ export const MOODS = {
         emoji: '💼',
         description: 'Quiet cafes for focus',
         defaultRadius: 500,
-        // Primary search: cafes
         osmTags: ['amenity=cafe'],
-        // Fallback if no cafes: try restaurants
         fallbackTags: ['amenity=restaurant'],
         fallbackMessage: 'No cafes found nearby. Showing restaurants instead.',
         color: '#4A90A4'
@@ -43,9 +38,8 @@ export const MOODS = {
         emoji: '💰',
         description: 'Affordable local spots',
         defaultRadius: 2000,
-        // Budget searches broadly from the start
         osmTags: ['amenity=restaurant', 'amenity=fast_food', 'amenity=cafe'],
-        fallbackTags: [], // No fallback needed - already broad
+        fallbackTags: [],
         fallbackMessage: '',
         color: '#27AE60'
     },
@@ -56,22 +50,18 @@ export const MOODS = {
         description: 'All food options',
         defaultRadius: 1500,
         osmTags: ['amenity=restaurant', 'amenity=cafe', 'amenity=fast_food', 'amenity=bar', 'amenity=pub'],
-        fallbackTags: [], // Already includes everything
+        fallbackTags: [],
         fallbackMessage: '',
         color: '#9B59B6'
     }
 };
 
-/**
- * Get mood config by ID
- */
+// Get mood by id
 export function getMoodConfig(moodId) {
     return MOODS[moodId] || null;
 }
 
-/**
- * Get all moods as an array for rendering
- */
+// Get all moods as array
 export function getAllMoods() {
     return Object.values(MOODS);
 }

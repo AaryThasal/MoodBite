@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Brand Colors - Teal Primary, Amber Accent, Light Slate Background */
+/* Theme colors */
 :root {
   --color-primary: #0D9488;
   --color-primary-light: #14B8A6;
@@ -20,7 +20,7 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-/* Base Styles */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +44,7 @@ body {
   min-height: 100vh;
 }
 
-/* Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -62,7 +62,7 @@ body {
   background: var(--color-text-muted);
 }
 
-/* User Location Marker */
+/* Map user marker */
 .user-marker {
   background: transparent;
 }
@@ -76,7 +76,7 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/* Leaflet Overrides */
+/* Map popup styles */
 .leaflet-popup-content-wrapper {
   border-radius: 12px;
   box-shadow: var(--shadow-lg);

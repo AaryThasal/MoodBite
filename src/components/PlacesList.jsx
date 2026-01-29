@@ -1,6 +1,4 @@
-/**
- * Places list - The primary decision-making area
- */
+// Scrollable list of place cards sorted by distance
 import PlaceCard from './PlaceCard';
 
 function PlacesList({ places, selectedPlaceId, onSelectPlace }) {

@@ -1,6 +1,4 @@
-/**
- * Results view - List-primary layout with contained map
- */
+// Results screen showing places list on left and map on right
 import { useState } from 'react';
 import MapView from './MapView';
 import PlacesList from './PlacesList';

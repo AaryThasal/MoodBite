@@ -1,22 +1,12 @@
-/**
- * Applies mood-based filtering and sorting to places.
- * Adds distance information and sorts by proximity.
- */
-
+// Adds distance to places and sorts them by proximity
 import { calculateDistance } from '../utils/distance.js';
 
-/**
- * Adds distance from user to each place and sorts by distance
- * @param {Place[]} places - Array of places from API
- * @param {object} userLocation - User's {lat, lng}
- * @returns {Place[]} Places with distance, sorted nearest first
- */
+// Calculates distance for each place and sorts nearest first
 export function filterAndSortPlaces(places, userLocation) {
     if (!places || places.length === 0) {
         return [];
     }
 
-    // Add distance to each place
     const placesWithDistance = places.map(place => ({
         ...place,
         distance: calculateDistance(
@@ -27,13 +17,10 @@ export function filterAndSortPlaces(places, userLocation) {
         )
     }));
 
-    // Sort by distance (nearest first) - applies to all moods
     return placesWithDistance.sort((a, b) => a.distance - b.distance);
 }
 
-/**
- * Gets a display label for place type
- */
+// Returns readable label for place type
 export function getPlaceTypeLabel(type) {
     const labels = {
         cafe: 'Cafe',

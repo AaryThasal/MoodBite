@@ -1,12 +1,8 @@
-/**
- * Wraps the Browser Geolocation API with Promise-based interface.
- * Handles various error cases with user-friendly messages.
- */
-
+// Gets user location using browser geolocation API
 const GEOLOCATION_OPTIONS = {
     enableHighAccuracy: true,
     timeout: 10000,
-    maximumAge: 300000 // Cache position for 5 minutes
+    maximumAge: 300000
 };
 
 export function getCurrentPosition() {
@@ -24,7 +20,6 @@ export function getCurrentPosition() {
                 });
             },
             (error) => {
-                // Map error codes to user-friendly messages
                 const errorMessages = {
                     1: 'Location permission denied. Please allow location access to find nearby places.',
                     2: 'Unable to determine your location. Please try again.',

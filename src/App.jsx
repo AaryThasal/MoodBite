@@ -1,8 +1,4 @@
-/**
- * Main App component - controls application state flow.
- * 
- * Flow: LocationPrompt → MoodSelector → ResultsView
- */
+// Main App - handles flow between location, mood selection, and results screens
 import { useState, useCallback } from 'react';
 import LocationPrompt from './components/LocationPrompt';
 import MoodSelector from './components/MoodSelector';

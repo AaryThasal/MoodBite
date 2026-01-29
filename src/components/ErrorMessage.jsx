@@ -1,6 +1,4 @@
-/**
- * Friendly error message with retry
- */
+// Displays error message with optional retry button
 function ErrorMessage({ message, onRetry = null }) {
     const styles = {
         container: {

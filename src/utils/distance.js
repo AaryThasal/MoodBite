@@ -1,9 +1,6 @@
-/**
- * Calculates the distance between two geographic coordinates using the Haversine formula.
- * Returns distance in meters.
- */
+// Calculates distance between two coordinates in meters (Haversine formula)
 export function calculateDistance(lat1, lon1, lat2, lon2) {
-  const R = 6371000; // Earth's radius in meters
+  const R = 6371000;
   const toRad = (deg) => (deg * Math.PI) / 180;
 
   const dLat = toRad(lat2 - lat1);
@@ -19,9 +16,7 @@ export function calculateDistance(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-/**
- * Formats distance for display (e.g., "500 m" or "1.2 km")
- */
+// Formats distance as "500 m" or "1.2 km"
 export function formatDistance(meters) {
   if (meters < 1000) {
     return `${Math.round(meters)} m`;

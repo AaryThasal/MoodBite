@@ -1,6 +1,4 @@
-/**
- * Location screen - Hero-style landing with prominent CTA
- */
+// Location screen - lets user share location or search an address
 import { useState } from 'react';
 import { searchAddress } from '../services/geocoding';
 

@@ -1,6 +1,4 @@
-/**
- * Mood selection - Interactive card grid with personality
- */
+// Mood selection screen with interactive cards and distance picker
 import { useState } from 'react';
 import { getAllMoods, DISTANCE_OPTIONS } from '../services/moodConfig';
 
@@ -21,7 +19,6 @@ function MoodSelector({ onConfirm, locationName = null }) {
         }
     };
 
-    // Styles object for reliable rendering
     const styles = {
         container: {
             minHeight: '100vh',

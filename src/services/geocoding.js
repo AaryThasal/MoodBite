@@ -1,15 +1,7 @@
-/**
- * Geocoding service using Nominatim (OpenStreetMap's free geocoding API).
- * Converts addresses/place names to coordinates.
- */
-
+// Converts addresses to coordinates using Nominatim API
 const NOMINATIM_API_URL = 'https://nominatim.openstreetmap.org/search';
 
-/**
- * Search for addresses/places and return matching locations.
- * @param {string} query - Search text (address, place name, area)
- * @returns {Promise<Array>} Array of location results
- */
+// Searches for addresses and returns matching locations
 export async function searchAddress(query) {
     if (!query || query.trim().length < 3) {
         return [];
@@ -25,7 +17,6 @@ export async function searchAddress(query) {
 
         const response = await fetch(`${NOMINATIM_API_URL}?${params}`, {
             headers: {
-                // Nominatim requires a User-Agent for identification
                 'User-Agent': 'MoodBite/1.0'
             }
         });
@@ -36,7 +27,6 @@ export async function searchAddress(query) {
 
         const data = await response.json();
 
-        // Normalize results to a simpler format
         return data.map(item => ({
             id: item.place_id,
             lat: parseFloat(item.lat),
@@ -51,14 +41,11 @@ export async function searchAddress(query) {
     }
 }
 
-/**
- * Builds a shorter, more readable name from Nominatim result
- */
+// Creates a short display name from address parts
 function buildShortName(item) {
     const parts = [];
 
     if (item.address) {
-        // Try to build a sensible short name
         const addr = item.address;
         if (addr.amenity) parts.push(addr.amenity);
         else if (addr.road) parts.push(addr.road);
@@ -70,7 +57,6 @@ function buildShortName(item) {
         else if (addr.village) parts.push(addr.village);
     }
 
-    // Fallback: use first two parts of display_name
     if (parts.length === 0 && item.display_name) {
         const displayParts = item.display_name.split(',').slice(0, 2);
         return displayParts.join(',').trim();

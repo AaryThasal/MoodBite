@@ -1,13 +1,10 @@
-/**
- * Leaflet map component showing user location and place markers.
- * Handles marker clicks and syncs with selected place state.
- */
+// Map showing user location and nearby places with clickable markers
 import { useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Fix for default marker icons in Leaflet with bundlers
+// Fix default marker icons for bundlers
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -19,7 +16,7 @@ L.Icon.Default.mergeOptions({
     shadowUrl: markerShadow,
 });
 
-// Custom icon for user location
+// Blue dot for user location
 const userIcon = new L.DivIcon({
     className: 'user-marker',
     html: '<div class="user-marker-inner"></div>',
@@ -27,7 +24,7 @@ const userIcon = new L.DivIcon({
     iconAnchor: [10, 10]
 });
 
-// Custom icon for places
+// Standard marker for places
 const placeIcon = new L.Icon({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
@@ -38,7 +35,7 @@ const placeIcon = new L.Icon({
     shadowSize: [41, 41]
 });
 
-// Component to handle map updates when selected place changes
+// Moves map to selected place
 function MapController({ selectedPlace }) {
     const map = useMap();
     const prevSelectedRef = useRef(null);

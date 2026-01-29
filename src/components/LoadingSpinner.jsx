@@ -1,6 +1,4 @@
-/**
- * Loading spinner with personality
- */
+// Animated loading spinner with message
 function LoadingSpinner({ message = 'Loading...' }) {
     const styles = {
         container: {

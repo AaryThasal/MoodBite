@@ -1,10 +1,6 @@
-/**
- * Fetches nearby places from OpenStreetMap using the Overpass API.
- * Includes fallback logic when primary tags return no results.
- * Uses multiple API endpoints with automatic retry for reliability.
- */
+// Fetches nearby places from OpenStreetMap Overpass API with retry and fallback
 
-// Multiple Overpass API endpoints for load balancing and failover
+// API endpoints for failover
 const OVERPASS_ENDPOINTS = [
     'https://overpass-api.de/api/interpreter',
     'https://overpass.kumi.systems/api/interpreter',
@@ -12,18 +8,12 @@ const OVERPASS_ENDPOINTS = [
 ];
 
 const MAX_RETRIES = 3;
-const INITIAL_RETRY_DELAY = 500; // ms
+const INITIAL_RETRY_DELAY = 500;
 
-/**
- * Sleep utility for retry delays
- */
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-/**
- * Builds an Overpass QL query for the given parameters
- */
+// Builds Overpass query string from location and tags
 function buildOverpassQuery(lat, lng, radiusMeters, osmTags) {
-    // Build node queries for each tag
     const tagQueries = osmTags.map(tag => {
         const [key, value] = tag.split('=');
         return `node["${key}"="${value}"](around:${radiusMeters},${lat},${lng});`;
@@ -38,12 +28,10 @@ out body;
 `;
 }
 
-/**
- * Normalizes raw Overpass API response into a consistent place format
- */
+// Converts API response to clean place objects
 function normalizePlaces(elements) {
     return elements
-        .filter(el => el.tags && el.tags.name) // Only include places with names
+        .filter(el => el.tags && el.tags.name)
         .map(el => ({
             id: el.id,
             name: el.tags.name,
@@ -59,9 +47,7 @@ function normalizePlaces(elements) {
         }));
 }
 
-/**
- * Makes a single fetch attempt to an Overpass endpoint
- */
+// Fetches from one Overpass endpoint
 async function fetchFromEndpoint(endpoint, query, signal) {
     const response = await fetch(endpoint, {
         method: 'POST',
@@ -80,19 +66,15 @@ async function fetchFromEndpoint(endpoint, query, signal) {
     return normalizePlaces(data.elements || []);
 }
 
-/**
- * Fetches nearby places from Overpass API with automatic retry
- */
+// Fetches places with retries across multiple endpoints
 async function fetchPlaces(lat, lng, radiusMeters, osmTags) {
     const query = buildOverpassQuery(lat, lng, radiusMeters, osmTags);
     let lastError = null;
 
     for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
-        // Cycle through different endpoints on each retry
         const endpoint = OVERPASS_ENDPOINTS[attempt % OVERPASS_ENDPOINTS.length];
 
         try {
-            // Create abort controller for timeout
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 15000);
 
@@ -103,39 +85,23 @@ async function fetchPlaces(lat, lng, radiusMeters, osmTags) {
             lastError = error;
             console.warn(`Attempt ${attempt + 1} failed (${endpoint}):`, error.message);
 
-            // Don't retry on abort or if it's the last attempt
             if (error.name === 'AbortError' || attempt === MAX_RETRIES - 1) {
                 continue;
             }
 
-            // Exponential backoff before retry
             const delay = INITIAL_RETRY_DELAY * Math.pow(2, attempt);
             await sleep(delay);
         }
     }
 
-    // All retries exhausted
     throw lastError || new Error('Failed to fetch places after multiple attempts');
 }
 
-/**
- * Fetches nearby places with automatic fallback.
- * If primary tags return no results, tries fallback tags.
- * 
- * @param {number} lat - Latitude
- * @param {number} lng - Longitude
- * @param {number} radiusMeters - Search radius
- * @param {string[]} primaryTags - Primary OSM tags to search
- * @param {string[]} fallbackTags - Fallback OSM tags if primary returns empty
- * @param {string} fallbackMessage - Message to show when fallback is used
- * @returns {Promise<{places: Place[], usedFallback: boolean, message: string}>}
- */
+// Fetches places using primary tags, falls back to secondary if empty
 export async function fetchNearbyPlaces(lat, lng, radiusMeters, primaryTags, fallbackTags = [], fallbackMessage = '') {
     try {
-        // Try primary tags first
         let places = await fetchPlaces(lat, lng, radiusMeters, primaryTags);
 
-        // If no results and we have fallback tags, try them
         if (places.length === 0 && fallbackTags.length > 0) {
             places = await fetchPlaces(lat, lng, radiusMeters, fallbackTags);
 
@@ -152,7 +118,6 @@ export async function fetchNearbyPlaces(lat, lng, radiusMeters, primaryTags, fal
             message: ''
         };
     } catch (error) {
-        // Network or parsing errors
         if (error.name === 'TypeError' && error.message.includes('fetch')) {
             throw new Error('Network error. Please check your internet connection.');
         }
