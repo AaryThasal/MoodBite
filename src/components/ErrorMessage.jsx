@@ -27,12 +27,12 @@ function ErrorMessage({ message, onRetry = null }) {
         title: {
             fontSize: '1.5rem',
             fontWeight: '700',
-            color: '#1e293b',
+            color: '#0F172A',
             marginBottom: '12px'
         },
         message: {
             fontSize: '1rem',
-            color: '#64748b',
+            color: '#64748B',
             marginBottom: '32px',
             lineHeight: '1.6'
         },
@@ -40,12 +40,12 @@ function ErrorMessage({ message, onRetry = null }) {
             padding: '16px 40px',
             fontSize: '1rem',
             fontWeight: '600',
-            color: '#ffffff',
-            background: 'linear-gradient(135deg, #0d9488 0%, #0f766e 100%)',
+            color: '#FFFFFF',
+            backgroundColor: '#0F766E',
             border: 'none',
             borderRadius: '14px',
             cursor: 'pointer',
-            boxShadow: '0 10px 30px -10px rgba(13, 148, 136, 0.5)',
+            boxShadow: '0 10px 30px -10px rgba(15, 118, 110, 0.5)',
             transition: 'all 0.2s ease'
         }
     };

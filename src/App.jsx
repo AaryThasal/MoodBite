@@ -120,7 +120,7 @@ function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #fef3c7 100%)'
+        backgroundColor: '#F8FAFC'
       }}>
         <LoadingSpinner message="Finding places near you..." />
       </div>
@@ -135,7 +135,7 @@ function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #fef3c7 100%)'
+        backgroundColor: '#F8FAFC'
       }}>
         <ErrorMessage message={error} onRetry={handleRetry} />
       </div>

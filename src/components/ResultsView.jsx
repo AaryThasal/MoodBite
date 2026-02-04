@@ -24,12 +24,12 @@ function ResultsView({
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#f8fafc'
+            backgroundColor: '#F8FAFC'
         },
         header: {
             flexShrink: 0,
-            backgroundColor: '#ffffff',
-            borderBottom: '1px solid #e2e8f0',
+            backgroundColor: '#FFFFFF',
+            borderBottom: '1px solid #E2E8F0',
             boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
         },
         headerInner: {
@@ -51,22 +51,22 @@ function ResultsView({
             gap: '10px',
             padding: '10px 20px',
             borderRadius: '9999px',
-            color: '#ffffff',
+            color: '#FFFFFF',
             fontWeight: '600',
             fontSize: '0.875rem',
-            background: `linear-gradient(135deg, ${moodConfig.color}, ${moodConfig.color}dd)`,
-            boxShadow: `0 4px 14px -3px ${moodConfig.color}50`
+            backgroundColor: '#0F766E',
+            boxShadow: '0 4px 14px -3px rgba(15, 118, 110, 0.5)'
         },
         infoGroup: {
             display: 'flex',
             alignItems: 'center',
             gap: '12px',
             fontSize: '0.875rem',
-            color: '#64748b'
+            color: '#64748B'
         },
         radiusBadge: {
             padding: '6px 14px',
-            backgroundColor: '#f1f5f9',
+            backgroundColor: '#F8FAFC',
             borderRadius: '8px',
             fontWeight: '500'
         },
@@ -79,9 +79,9 @@ function ResultsView({
             padding: '12px 24px',
             fontSize: '0.875rem',
             fontWeight: '600',
-            color: '#0d9488',
-            backgroundColor: '#f0fdfa',
-            border: 'none',
+            color: '#0F766E',
+            backgroundColor: '#F8FAFC',
+            border: '1px solid #E2E8F0',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -90,9 +90,9 @@ function ResultsView({
             padding: '12px 24px',
             fontSize: '0.875rem',
             fontWeight: '500',
-            color: '#64748b',
-            backgroundColor: '#f1f5f9',
-            border: 'none',
+            color: '#64748B',
+            backgroundColor: '#F8FAFC',
+            border: '1px solid #E2E8F0',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -102,7 +102,7 @@ function ResultsView({
             backgroundColor: '#fffbeb',
             borderTop: '1px solid #fef3c7',
             fontSize: '0.875rem',
-            color: '#d97706'
+            color: '#F59E0B'
         },
         main: {
             flex: 1,
@@ -119,8 +119,8 @@ function ResultsView({
         listPanel: {
             width: '440px',
             flexShrink: 0,
-            backgroundColor: '#ffffff',
-            borderRight: '1px solid #e2e8f0',
+            backgroundColor: '#FFFFFF',
+            borderRight: '1px solid #E2E8F0',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden'
@@ -128,14 +128,14 @@ function ResultsView({
         mapPanel: {
             flex: 1,
             padding: '20px',
-            backgroundColor: '#f8fafc'
+            backgroundColor: '#F8FAFC'
         },
         mapContainer: {
             height: '100%',
             borderRadius: '20px',
             overflow: 'hidden',
             boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)',
-            border: '1px solid #e2e8f0'
+            border: '1px solid #E2E8F0'
         }
     };
 
