@@ -32,17 +32,6 @@ export const MOODS = {
         fallbackMessage: 'No fast food found. Showing other food places.',
         color: '#E67E22'
     },
-    budget: {
-        id: 'budget',
-        name: 'Budget',
-        emoji: '💰',
-        description: 'Affordable local spots',
-        defaultRadius: 2000,
-        osmTags: ['amenity=restaurant', 'amenity=fast_food', 'amenity=cafe'],
-        fallbackTags: [],
-        fallbackMessage: '',
-        color: '#27AE60'
-    },
     casual: {
         id: 'casual',
         name: 'Casual',

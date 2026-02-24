@@ -98,3 +98,67 @@ body {
 .animate-fade-in-up {
   animation: fadeInUp 0.4s ease-out;
 }
+
+/* Mood Cards Grid - Responsive layout for 3 cards */
+.mood-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet: 2 columns, last card centered */
+@media (min-width: 560px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 480px;
+  }
+  
+  .mood-grid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 8px);
+  }
+}
+
+/* Desktop: 3 columns in a single row */
+@media (min-width: 820px) {
+  .mood-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 700px;
+  }
+  
+  .mood-grid > *:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
+}
+
+/* Mood card styles */
+.mood-card {
+  position: relative;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mood-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+}
+
+.mood-card.selected {
+  border: 3px solid #0F766E;
+  box-shadow: 0 20px 40px -12px rgba(15, 118, 110, 0.25);
+  transform: scale(1.02);
+}

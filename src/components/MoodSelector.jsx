@@ -48,25 +48,27 @@ function MoodSelector({ onConfirm, locationName = null }) {
             color: '#64748B'
         },
         grid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '16px',
             marginBottom: '24px'
         },
-        card: (isSelected) => ({
+        card: {
             position: 'relative',
-            padding: '20px',
+            padding: '24px',
             borderRadius: '20px',
             backgroundColor: '#FFFFFF',
-            border: isSelected ? '3px solid #0F766E' : '2px solid #E2E8F0',
-            boxShadow: isSelected
-                ? '0 20px 40px -12px rgba(15, 118, 110, 0.25)'
-                : '0 8px 24px -8px rgba(0, 0, 0, 0.08)',
+            border: '2px solid #E2E8F0',
+            boxShadow: '0 8px 24px -8px rgba(0, 0, 0, 0.08)',
             cursor: 'pointer',
             transition: 'all 0.2s ease',
             textAlign: 'left',
-            transform: isSelected ? 'scale(1.02)' : 'scale(1)'
-        }),
+            minHeight: '140px',
+            display: 'flex',
+            flexDirection: 'column'
+        },
+        cardSelected: {
+            border: '3px solid #0F766E',
+            boxShadow: '0 20px 40px -12px rgba(15, 118, 110, 0.25)',
+            transform: 'scale(1.02)'
+        },
         emojiBox: (color) => ({
             width: '52px',
             height: '52px',
@@ -192,13 +194,14 @@ function MoodSelector({ onConfirm, locationName = null }) {
                 </div>
 
                 {/* Mood Grid */}
-                <div style={styles.grid}>
+                <div className="mood-grid" style={styles.grid}>
                     {moods.map((mood) => {
                         const isSelected = selectedMood?.id === mood.id;
                         return (
                             <button
                                 key={mood.id}
-                                style={styles.card(isSelected)}
+                                className={`mood-card ${isSelected ? 'selected' : ''}`}
+                                style={isSelected ? { ...styles.card, ...styles.cardSelected } : styles.card}
                                 onClick={() => handleMoodSelect(mood)}
                             >
                                 <div style={styles.emojiBox(mood.color)}>
