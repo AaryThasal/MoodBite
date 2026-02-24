@@ -3,6 +3,8 @@
 MoodBite is a frontend web application that helps users quickly discover nearby food places based on their **current mood and context**
 ---
 
+🔗 Live Demo: https://mood-bite-coral.vercel.app
+
 ## ✨ Features
 
 ### 😊 Mood-Based Recommendations
