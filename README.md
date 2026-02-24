@@ -12,13 +12,7 @@ Users choose a mood, and the system suggests places accordingly:
 
 - Work → Cafés and quiet places
 - Quick Bite → Fast food / takeaway
-- Budget → Affordable eateries
 - Casual → General food spots
-
-Mood affects:
-- Place type filtering
-- Search radius
-- Sorting priority
 
 ---
 
