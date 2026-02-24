@@ -4,6 +4,14 @@ import MapView from './MapView';
 import PlacesList from './PlacesList';
 import { getMoodConfig } from '../services/moodConfig';
 
+const RADIUS_OPTIONS = [
+    { value: 500, label: '500 m' },
+    { value: 1000, label: '1 km' },
+    { value: 2000, label: '2 km' },
+    { value: 3000, label: '3 km' },
+    { value: 5000, label: '5 km' }
+];
+
 function ResultsView({
     userLocation,
     places,
@@ -11,13 +19,13 @@ function ResultsView({
     radius,
     fallbackMessage,
     onChangeMood,
-    onChangeLocation
+    onChangeLocation,
+    onRadiusChange
 }) {
     const [selectedPlace, setSelectedPlace] = useState(null);
     const moodConfig = getMoodConfig(mood);
 
     const handleSelectPlace = (place) => setSelectedPlace(place);
-    const formatRadius = (r) => r >= 1000 ? `${r / 1000} km` : `${r} m`;
 
     const styles = {
         container: {
@@ -64,11 +72,24 @@ function ResultsView({
             fontSize: '0.875rem',
             color: '#64748B'
         },
-        radiusBadge: {
+        radiusSelect: {
             padding: '6px 14px',
             backgroundColor: '#F8FAFC',
             borderRadius: '8px',
-            fontWeight: '500'
+            fontWeight: '500',
+            fontSize: '0.875rem',
+            color: '#64748B',
+            border: '1px solid #E2E8F0',
+            cursor: 'pointer',
+            outline: 'none',
+            appearance: 'none',
+            WebkitAppearance: 'none',
+            MozAppearance: 'none',
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right 10px center',
+            paddingRight: '32px',
+            minWidth: '90px'
         },
         rightSection: {
             display: 'flex',
@@ -151,7 +172,17 @@ function ResultsView({
                             <span>{moodConfig.name}</span>
                         </div>
                         <div style={styles.infoGroup}>
-                            <span style={styles.radiusBadge}>{formatRadius(radius)}</span>
+                            <select
+                                style={styles.radiusSelect}
+                                value={radius}
+                                onChange={(e) => onRadiusChange(Number(e.target.value))}
+                            >
+                                {RADIUS_OPTIONS.map(opt => (
+                                    <option key={opt.value} value={opt.value}>
+                                        {opt.label}
+                                    </option>
+                                ))}
+                            </select>
                             {userLocation.displayName && (
                                 <span style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                     from {userLocation.displayName}

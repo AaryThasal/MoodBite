@@ -79,6 +79,35 @@ function App() {
     setFallbackMessage('');
   }, []);
 
+  const handleRadiusChange = useCallback(async (newRadius) => {
+    if (!location || !mood) return;
+
+    setRadius(newRadius);
+    setIsLoadingPlaces(true);
+    setError(null);
+    setFallbackMessage('');
+
+    try {
+      const moodConfig = getMoodConfig(mood);
+      const { places: rawPlaces, message } = await fetchNearbyPlaces(
+        location.lat,
+        location.lng,
+        newRadius,
+        moodConfig.osmTags,
+        moodConfig.fallbackTags,
+        moodConfig.fallbackMessage
+      );
+
+      const sortedPlaces = filterAndSortPlaces(rawPlaces, location);
+      setPlaces(sortedPlaces);
+      setFallbackMessage(message);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setIsLoadingPlaces(false);
+    }
+  }, [location, mood]);
+
   const handleChangeLocation = useCallback(() => {
     setLocation(null);
     setMood(null);
@@ -152,6 +181,7 @@ function App() {
       fallbackMessage={fallbackMessage}
       onChangeMood={handleChangeMood}
       onChangeLocation={handleChangeLocation}
+      onRadiusChange={handleRadiusChange}
     />
   );
 }
