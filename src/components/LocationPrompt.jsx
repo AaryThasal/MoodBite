@@ -45,7 +45,7 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
     const styles = {
         container: {
             minHeight: '100vh',
-            backgroundColor: '#F0F4F1',
+            backgroundColor: '#FDF6E3',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -59,19 +59,19 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             textAlign: 'center',
             marginBottom: '48px',
             padding: '32px',
-            backgroundColor: '#E8EEEA',
+            backgroundColor: '#F5ECD9',
             borderRadius: '32px'
         },
         iconBox: {
             width: '96px',
             height: '96px',
             borderRadius: '32px',
-            backgroundColor: '#0F766E',
+            backgroundColor: '#E74C3C',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 24px',
-            boxShadow: '0 20px 40px -10px rgba(15, 118, 110, 0.4)'
+            boxShadow: '0 20px 40px -10px rgba(231, 76, 60, 0.4)'
         },
         icon: {
             fontSize: '3rem'
@@ -79,18 +79,18 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
         title: {
             fontSize: '3rem',
             fontWeight: '800',
-            color: '#1E293B',
+            color: '#3E2723',
             marginBottom: '12px'
         },
         subtitle: {
             fontSize: '1.25rem',
-            color: '#5F6D64'
+            color: '#8B7355'
         },
         card: {
-            backgroundColor: '#E8EEEA',
+            backgroundColor: '#F5ECD9',
             borderRadius: '32px',
             padding: '40px',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+            boxShadow: '0 25px 50px -12px rgba(62, 39, 35, 0.1)',
             marginBottom: '24px'
         },
         primaryBtn: {
@@ -99,7 +99,7 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             fontSize: '1.125rem',
             fontWeight: '700',
             color: '#FFFFFF',
-            backgroundColor: '#0F766E',
+            backgroundColor: '#E74C3C',
             border: 'none',
             borderRadius: '16px',
             cursor: 'pointer',
@@ -107,7 +107,7 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             alignItems: 'center',
             justifyContent: 'center',
             gap: '12px',
-            boxShadow: '0 10px 40px -10px rgba(15, 118, 110, 0.5)',
+            boxShadow: '0 10px 40px -10px rgba(231, 76, 60, 0.5)',
             transition: 'all 0.2s ease'
         },
         error: {
@@ -128,10 +128,10 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
         line: {
             flex: 1,
             height: '1px',
-            backgroundColor: '#C5D1C8'
+            backgroundColor: '#E8D5C4'
         },
         dividerText: {
-            color: '#5F6D64',
+            color: '#8B7355',
             fontSize: '0.875rem',
             fontWeight: '500'
         },
@@ -143,28 +143,28 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             flex: 1,
             padding: '16px 20px',
             fontSize: '1rem',
-            backgroundColor: '#F7F9F8',
-            border: '2px solid #D0DCD4',
+            backgroundColor: '#FFFBF5',
+            border: '2px solid #E8D5C4',
             borderRadius: '14px',
-            color: '#1E293B',
+            color: '#3E2723',
             outline: 'none',
             transition: 'all 0.2s ease'
         },
         searchBtn: {
             padding: '16px 20px',
             fontSize: '1.25rem',
-            backgroundColor: '#F7F9F8',
-            border: '1px solid #D0DCD4',
+            backgroundColor: '#FFFBF5',
+            border: '1px solid #E8D5C4',
             borderRadius: '14px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
         },
         resultsList: {
             marginTop: '16px',
-            backgroundColor: '#F7F9F8',
+            backgroundColor: '#FFFBF5',
             borderRadius: '16px',
             overflow: 'hidden',
-            border: '1px solid #D0DCD4'
+            border: '1px solid #E8D5C4'
         },
         resultItem: {
             width: '100%',
@@ -175,13 +175,13 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             textAlign: 'left',
             backgroundColor: 'transparent',
             border: 'none',
-            borderBottom: '1px solid #D0DCD4',
+            borderBottom: '1px solid #E8D5C4',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
         },
         footer: {
             textAlign: 'center',
-            color: '#5F6D64',
+            color: '#8B7355',
             fontSize: '0.875rem'
         }
     };
@@ -276,13 +276,13 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
                                     <span style={{
                                         width: '36px',
                                         height: '36px',
-                                        backgroundColor: '#E8EEEA',
+                                        backgroundColor: '#F5ECD9',
                                         borderRadius: '10px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center'
                                     }}>📍</span>
-                                    <span style={{ color: '#5F6D64' }}>{result.shortName}</span>
+                                    <span style={{ color: '#8B7355' }}>{result.shortName}</span>
                                 </button>
                             ))}
                         </div>

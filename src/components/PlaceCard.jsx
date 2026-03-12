@@ -8,11 +8,11 @@ function PlaceCard({ place, isSelected, onClick, index }) {
             position: 'relative',
             padding: '20px',
             borderRadius: '16px',
-            backgroundColor: isSelected ? '#F0F7F6' : '#FAFBFA',
-            border: isSelected ? '2px solid #0F766E' : '2px solid #D0DCD4',
+            backgroundColor: isSelected ? '#F5F9EE' : '#FFFBF5',
+            border: isSelected ? '2px solid #7CB342' : '2px solid #E8D5C4',
             boxShadow: isSelected
-                ? '0 10px 25px -5px rgba(15, 118, 110, 0.2)'
-                : '0 4px 15px -3px rgba(0, 0, 0, 0.05)',
+                ? '0 10px 25px -5px rgba(124, 179, 66, 0.2)'
+                : '0 4px 15px -3px rgba(62, 39, 35, 0.08)',
             cursor: 'pointer',
             transition: 'all 0.2s ease',
             display: 'flex',
@@ -23,8 +23,8 @@ function PlaceCard({ place, isSelected, onClick, index }) {
             width: '36px',
             height: '36px',
             borderRadius: '10px',
-            backgroundColor: isSelected ? '#0F766E' : '#F0F4F1',
-            color: isSelected ? '#FFFFFF' : '#5F6D64',
+            backgroundColor: isSelected ? '#7CB342' : '#FDF6E3',
+            color: isSelected ? '#FFFFFF' : '#8B7355',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -39,7 +39,7 @@ function PlaceCard({ place, isSelected, onClick, index }) {
         name: {
             fontSize: '1rem',
             fontWeight: '600',
-            color: '#1E293B',
+            color: '#3E2723',
             marginBottom: '6px',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
@@ -55,13 +55,13 @@ function PlaceCard({ place, isSelected, onClick, index }) {
             padding: '4px 10px',
             fontSize: '0.75rem',
             fontWeight: '600',
-            backgroundColor: isSelected ? '#F0F7F6' : '#F0F4F1',
-            color: isSelected ? '#0F766E' : '#5F6D64',
+            backgroundColor: isSelected ? '#F5F9EE' : '#FDF6E3',
+            color: isSelected ? '#7CB342' : '#8B7355',
             borderRadius: '6px'
         },
         cuisine: {
             fontSize: '0.75rem',
-            color: '#5F6D64',
+            color: '#8B7355',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap'
@@ -70,7 +70,7 @@ function PlaceCard({ place, isSelected, onClick, index }) {
             flexShrink: 0,
             fontSize: '0.875rem',
             fontWeight: '700',
-            color: '#F59E0B'
+            color: '#E6A817'
         }
     };
 

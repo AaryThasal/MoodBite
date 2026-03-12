@@ -11,24 +11,24 @@ function PlacesList({ places, selectedPlaceId, onSelectPlace }) {
         header: {
             flexShrink: 0,
             padding: '24px 28px',
-            borderBottom: '1px solid #D0DCD4',
-            backgroundColor: '#E8EEEA'
+            borderBottom: '1px solid #E8D5C4',
+            backgroundColor: '#F5ECD9'
         },
         title: {
             fontSize: '1.375rem',
             fontWeight: '700',
-            color: '#1E293B',
+            color: '#3E2723',
             marginBottom: '4px'
         },
         subtitle: {
             fontSize: '0.875rem',
-            color: '#5F6D64'
+            color: '#8B7355'
         },
         scrollArea: {
             flex: 1,
             overflowY: 'auto',
             padding: '20px',
-            backgroundColor: '#E8EEEA'
+            backgroundColor: '#F5ECD9'
         },
         cardList: {
             display: 'flex',
@@ -43,13 +43,13 @@ function PlacesList({ places, selectedPlaceId, onSelectPlace }) {
             justifyContent: 'center',
             padding: '48px 32px',
             textAlign: 'center',
-            backgroundColor: '#E8EEEA'
+            backgroundColor: '#F5ECD9'
         },
         emptyIcon: {
             width: '80px',
             height: '80px',
             borderRadius: '50%',
-            backgroundColor: '#F0F4F1',
+            backgroundColor: '#FDF6E3',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -59,12 +59,12 @@ function PlacesList({ places, selectedPlaceId, onSelectPlace }) {
         emptyTitle: {
             fontSize: '1.25rem',
             fontWeight: '700',
-            color: '#1E293B',
+            color: '#3E2723',
             marginBottom: '8px'
         },
         emptyText: {
             fontSize: '0.875rem',
-            color: '#5F6D64',
+            color: '#8B7355',
             maxWidth: '220px'
         }
     };

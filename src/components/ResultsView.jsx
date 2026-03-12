@@ -32,13 +32,13 @@ function ResultsView({
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#F0F4F1'
+            backgroundColor: '#FDF6E3'
         },
         header: {
             flexShrink: 0,
-            backgroundColor: '#FAFBFA',
-            borderBottom: '1px solid #D0DCD4',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+            backgroundColor: '#FFFBF5',
+            borderBottom: '1px solid #E8D5C4',
+            boxShadow: '0 1px 3px rgba(62, 39, 35, 0.06)'
         },
         headerInner: {
             maxWidth: '1536px',
@@ -62,30 +62,30 @@ function ResultsView({
             color: '#FFFFFF',
             fontWeight: '600',
             fontSize: '0.875rem',
-            backgroundColor: '#0F766E',
-            boxShadow: '0 4px 14px -3px rgba(15, 118, 110, 0.5)'
+            backgroundColor: '#E74C3C',
+            boxShadow: '0 4px 14px -3px rgba(231, 76, 60, 0.5)'
         },
         infoGroup: {
             display: 'flex',
             alignItems: 'center',
             gap: '12px',
             fontSize: '0.875rem',
-            color: '#5F6D64'
+            color: '#8B7355'
         },
         radiusSelect: {
             padding: '6px 14px',
-            backgroundColor: '#F0F4F1',
+            backgroundColor: '#FDF6E3',
             borderRadius: '8px',
             fontWeight: '500',
             fontSize: '0.875rem',
-            color: '#5F6D64',
-            border: '1px solid #D0DCD4',
+            color: '#8B7355',
+            border: '1px solid #E8D5C4',
             cursor: 'pointer',
             outline: 'none',
             appearance: 'none',
             WebkitAppearance: 'none',
             MozAppearance: 'none',
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235F6D64' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B7355' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right 10px center',
             paddingRight: '32px',
@@ -100,9 +100,9 @@ function ResultsView({
             padding: '12px 24px',
             fontSize: '0.875rem',
             fontWeight: '600',
-            color: '#0F766E',
-            backgroundColor: '#F0F4F1',
-            border: '1px solid #D0DCD4',
+            color: '#7CB342',
+            backgroundColor: '#FDF6E3',
+            border: '1px solid #E8D5C4',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -111,9 +111,9 @@ function ResultsView({
             padding: '12px 24px',
             fontSize: '0.875rem',
             fontWeight: '500',
-            color: '#5F6D64',
-            backgroundColor: '#F0F4F1',
-            border: '1px solid #D0DCD4',
+            color: '#8B7355',
+            backgroundColor: '#FDF6E3',
+            border: '1px solid #E8D5C4',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -140,8 +140,8 @@ function ResultsView({
         listPanel: {
             width: '440px',
             flexShrink: 0,
-            backgroundColor: '#E8EEEA',
-            borderRight: '1px solid #D0DCD4',
+            backgroundColor: '#F5ECD9',
+            borderRight: '1px solid #E8D5C4',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden'
@@ -149,14 +149,14 @@ function ResultsView({
         mapPanel: {
             flex: 1,
             padding: '20px',
-            backgroundColor: '#F0F4F1'
+            backgroundColor: '#FDF6E3'
         },
         mapContainer: {
             height: '100%',
             borderRadius: '20px',
             overflow: 'hidden',
-            boxShadow: '0 10px 40px -10px rgba(0,0,0,0.12)',
-            border: '1px solid #D0DCD4'
+            boxShadow: '0 10px 40px -10px rgba(62, 39, 35, 0.15)',
+            border: '1px solid #E8D5C4'
         }
     };
 

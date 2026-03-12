@@ -15,7 +15,7 @@ function ErrorMessage({ message, onRetry = null }) {
             width: '80px',
             height: '80px',
             borderRadius: '50%',
-            backgroundColor: '#fef2f2',
+            backgroundColor: '#FDECEA',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -27,12 +27,12 @@ function ErrorMessage({ message, onRetry = null }) {
         title: {
             fontSize: '1.5rem',
             fontWeight: '700',
-            color: '#1E293B',
+            color: '#3E2723',
             marginBottom: '12px'
         },
         message: {
             fontSize: '1rem',
-            color: '#5F6D64',
+            color: '#8B7355',
             marginBottom: '32px',
             lineHeight: '1.6'
         },
@@ -41,11 +41,11 @@ function ErrorMessage({ message, onRetry = null }) {
             fontSize: '1rem',
             fontWeight: '600',
             color: '#FFFFFF',
-            backgroundColor: '#0F766E',
+            backgroundColor: '#E74C3C',
             border: 'none',
             borderRadius: '14px',
             cursor: 'pointer',
-            boxShadow: '0 10px 30px -10px rgba(15, 118, 110, 0.5)',
+            boxShadow: '0 10px 30px -10px rgba(231, 76, 60, 0.5)',
             transition: 'all 0.2s ease'
         }
     };

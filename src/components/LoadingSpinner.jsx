@@ -18,8 +18,8 @@ function LoadingSpinner({ message = 'Loading...' }) {
             width: '64px',
             height: '64px',
             borderRadius: '50%',
-            border: '4px solid #D0DCD4',
-            borderTopColor: '#0F766E',
+            border: '4px solid #E8D5C4',
+            borderTopColor: '#E74C3C',
             animation: 'spin 1s linear infinite'
         },
         emoji: {
@@ -31,7 +31,7 @@ function LoadingSpinner({ message = 'Loading...' }) {
         },
         message: {
             fontSize: '1.125rem',
-            color: '#5F6D64',
+            color: '#8B7355',
             fontWeight: '500'
         }
     };
