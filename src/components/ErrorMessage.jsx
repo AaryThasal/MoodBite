@@ -27,12 +27,12 @@ function ErrorMessage({ message, onRetry = null }) {
         title: {
             fontSize: '1.5rem',
             fontWeight: '700',
-            color: '#0F172A',
+            color: '#1E293B',
             marginBottom: '12px'
         },
         message: {
             fontSize: '1rem',
-            color: '#64748B',
+            color: '#5F6D64',
             marginBottom: '32px',
             lineHeight: '1.6'
         },

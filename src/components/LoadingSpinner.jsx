@@ -18,7 +18,7 @@ function LoadingSpinner({ message = 'Loading...' }) {
             width: '64px',
             height: '64px',
             borderRadius: '50%',
-            border: '4px solid #E2E8F0',
+            border: '4px solid #D0DCD4',
             borderTopColor: '#0F766E',
             animation: 'spin 1s linear infinite'
         },
@@ -31,7 +31,7 @@ function LoadingSpinner({ message = 'Loading...' }) {
         },
         message: {
             fontSize: '1.125rem',
-            color: '#64748B',
+            color: '#5F6D64',
             fontWeight: '500'
         }
     };

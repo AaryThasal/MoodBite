@@ -32,12 +32,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E2E8F0;
+  background: #C5D1C8;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748B;
+  background: #5F6D64;
 }
 
 /* Map user marker */
@@ -141,9 +141,9 @@ body {
   position: relative;
   padding: 24px;
   border-radius: 20px;
-  background-color: #FFFFFF;
-  border: 2px solid #E2E8F0;
-  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+  background-color: #FAFBFA;
+  border: 2px solid #D0DCD4;
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.06);
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
@@ -153,12 +153,14 @@ body {
 }
 
 .mood-card:hover {
-  border-color: #CBD5E1;
-  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+  border-color: #B8C7BC;
+  background-color: #F5F7F6;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.1);
 }
 
 .mood-card.selected {
   border: 3px solid #0F766E;
+  background-color: #F0F7F6;
   box-shadow: 0 20px 40px -12px rgba(15, 118, 110, 0.25);
   transform: scale(1.02);
 }

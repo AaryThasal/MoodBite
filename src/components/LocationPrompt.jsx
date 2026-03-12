@@ -45,7 +45,7 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
     const styles = {
         container: {
             minHeight: '100vh',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: '#F0F4F1',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -57,7 +57,10 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
         },
         hero: {
             textAlign: 'center',
-            marginBottom: '48px'
+            marginBottom: '48px',
+            padding: '32px',
+            backgroundColor: '#E8EEEA',
+            borderRadius: '32px'
         },
         iconBox: {
             width: '96px',
@@ -76,18 +79,18 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
         title: {
             fontSize: '3rem',
             fontWeight: '800',
-            color: '#0F172A',
+            color: '#1E293B',
             marginBottom: '12px'
         },
         subtitle: {
             fontSize: '1.25rem',
-            color: '#64748B'
+            color: '#5F6D64'
         },
         card: {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#E8EEEA',
             borderRadius: '32px',
             padding: '40px',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
             marginBottom: '24px'
         },
         primaryBtn: {
@@ -125,10 +128,10 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
         line: {
             flex: 1,
             height: '1px',
-            backgroundColor: '#E2E8F0'
+            backgroundColor: '#C5D1C8'
         },
         dividerText: {
-            color: '#64748B',
+            color: '#5F6D64',
             fontSize: '0.875rem',
             fontWeight: '500'
         },
@@ -140,27 +143,28 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             flex: 1,
             padding: '16px 20px',
             fontSize: '1rem',
-            backgroundColor: '#F8FAFC',
-            border: '2px solid #E2E8F0',
+            backgroundColor: '#F7F9F8',
+            border: '2px solid #D0DCD4',
             borderRadius: '14px',
-            color: '#0F172A',
+            color: '#1E293B',
             outline: 'none',
             transition: 'all 0.2s ease'
         },
         searchBtn: {
             padding: '16px 20px',
             fontSize: '1.25rem',
-            backgroundColor: '#F8FAFC',
-            border: '1px solid #E2E8F0',
+            backgroundColor: '#F7F9F8',
+            border: '1px solid #D0DCD4',
             borderRadius: '14px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
         },
         resultsList: {
             marginTop: '16px',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: '#F7F9F8',
             borderRadius: '16px',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            border: '1px solid #D0DCD4'
         },
         resultItem: {
             width: '100%',
@@ -171,13 +175,13 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
             textAlign: 'left',
             backgroundColor: 'transparent',
             border: 'none',
-            borderBottom: '1px solid #E2E8F0',
+            borderBottom: '1px solid #D0DCD4',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
         },
         footer: {
             textAlign: 'center',
-            color: '#64748B',
+            color: '#5F6D64',
             fontSize: '0.875rem'
         }
     };
@@ -272,13 +276,13 @@ function LocationPrompt({ onLocationSet, isLoading, error }) {
                                     <span style={{
                                         width: '36px',
                                         height: '36px',
-                                        backgroundColor: '#F8FAFC',
+                                        backgroundColor: '#E8EEEA',
                                         borderRadius: '10px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center'
                                     }}>📍</span>
-                                    <span style={{ color: '#64748B' }}>{result.shortName}</span>
+                                    <span style={{ color: '#5F6D64' }}>{result.shortName}</span>
                                 </button>
                             ))}
                         </div>

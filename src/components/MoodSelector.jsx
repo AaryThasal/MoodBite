@@ -22,7 +22,7 @@ function MoodSelector({ onConfirm, locationName = null }) {
     const styles = {
         container: {
             minHeight: '100vh',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: '#F0F4F1',
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'center',
@@ -40,12 +40,12 @@ function MoodSelector({ onConfirm, locationName = null }) {
         title: {
             fontSize: '2.5rem',
             fontWeight: '800',
-            color: '#0F172A',
+            color: '#1E293B',
             marginBottom: '12px'
         },
         subtitle: {
             fontSize: '1.25rem',
-            color: '#64748B'
+            color: '#5F6D64'
         },
         grid: {
             marginBottom: '24px'
@@ -54,9 +54,9 @@ function MoodSelector({ onConfirm, locationName = null }) {
             position: 'relative',
             padding: '24px',
             borderRadius: '20px',
-            backgroundColor: '#FFFFFF',
-            border: '2px solid #E2E8F0',
-            boxShadow: '0 8px 24px -8px rgba(0, 0, 0, 0.08)',
+            backgroundColor: '#FAFBFA',
+            border: '2px solid #D0DCD4',
+            boxShadow: '0 8px 24px -8px rgba(0, 0, 0, 0.06)',
             cursor: 'pointer',
             transition: 'all 0.2s ease',
             textAlign: 'left',
@@ -66,6 +66,7 @@ function MoodSelector({ onConfirm, locationName = null }) {
         },
         cardSelected: {
             border: '3px solid #0F766E',
+            backgroundColor: '#F0F7F6',
             boxShadow: '0 20px 40px -12px rgba(15, 118, 110, 0.25)',
             transform: 'scale(1.02)'
         },
@@ -85,12 +86,12 @@ function MoodSelector({ onConfirm, locationName = null }) {
         cardTitle: {
             fontSize: '1.1rem',
             fontWeight: '700',
-            color: '#0F172A',
+            color: '#1E293B',
             marginBottom: '4px'
         },
         cardDesc: {
             fontSize: '0.9rem',
-            color: '#64748B',
+            color: '#5F6D64',
             lineHeight: '1.4'
         },
         checkmark: {
@@ -113,10 +114,10 @@ function MoodSelector({ onConfirm, locationName = null }) {
             bottom: '0',
             left: '0',
             right: '0',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#FAFBFA',
             borderRadius: '24px 24px 0 0',
             padding: '24px 32px',
-            boxShadow: '0 -8px 30px -10px rgba(0, 0, 0, 0.15)',
+            boxShadow: '0 -8px 30px -10px rgba(0, 0, 0, 0.12)',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -124,7 +125,7 @@ function MoodSelector({ onConfirm, locationName = null }) {
             gap: '32px',
             flexWrap: 'wrap',
             zIndex: 100,
-            borderTop: '1px solid #E2E8F0'
+            borderTop: '1px solid #D0DCD4'
         },
         selectGroup: {
             display: 'flex',
@@ -133,16 +134,16 @@ function MoodSelector({ onConfirm, locationName = null }) {
         },
         selectLabel: {
             fontSize: '1.125rem',
-            color: '#64748B'
+            color: '#5F6D64'
         },
         select: {
             padding: '12px 20px',
             fontSize: '1rem',
             fontWeight: '600',
-            backgroundColor: '#F8FAFC',
-            border: '1px solid #E2E8F0',
+            backgroundColor: '#F0F4F1',
+            border: '1px solid #D0DCD4',
             borderRadius: '12px',
-            color: '#0F172A',
+            color: '#1E293B',
             cursor: 'pointer'
         },
         button: {
@@ -167,9 +168,10 @@ function MoodSelector({ onConfirm, locationName = null }) {
             alignItems: 'center',
             gap: '12px',
             padding: '12px 20px',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#FAFBFA',
             borderRadius: '9999px',
-            boxShadow: '0 4px 20px -4px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 20px -4px rgba(0, 0, 0, 0.08)',
+            border: '1px solid #D0DCD4'
         }
     };
 
@@ -182,7 +184,7 @@ function MoodSelector({ onConfirm, locationName = null }) {
                     <div style={styles.locationBadge}>
                         <div style={styles.badge}>
                             <span style={{ fontSize: '1.25rem' }}>📍</span>
-                            <span style={{ color: '#64748B', fontWeight: '500' }}>{locationName}</span>
+                            <span style={{ color: '#5F6D64', fontWeight: '500' }}>{locationName}</span>
                         </div>
                     </div>
                 )}

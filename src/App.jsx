@@ -149,7 +149,7 @@ function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#F8FAFC'
+        backgroundColor: '#F0F4F1'
       }}>
         <LoadingSpinner message="Finding places near you..." />
       </div>
@@ -164,7 +164,7 @@ function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#F8FAFC'
+        backgroundColor: '#F0F4F1'
       }}>
         <ErrorMessage message={error} onRetry={handleRetry} />
       </div>

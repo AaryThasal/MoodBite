@@ -32,13 +32,13 @@ function ResultsView({
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#F8FAFC'
+            backgroundColor: '#F0F4F1'
         },
         header: {
             flexShrink: 0,
-            backgroundColor: '#FFFFFF',
-            borderBottom: '1px solid #E2E8F0',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+            backgroundColor: '#FAFBFA',
+            borderBottom: '1px solid #D0DCD4',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
         },
         headerInner: {
             maxWidth: '1536px',
@@ -70,22 +70,22 @@ function ResultsView({
             alignItems: 'center',
             gap: '12px',
             fontSize: '0.875rem',
-            color: '#64748B'
+            color: '#5F6D64'
         },
         radiusSelect: {
             padding: '6px 14px',
-            backgroundColor: '#F8FAFC',
+            backgroundColor: '#F0F4F1',
             borderRadius: '8px',
             fontWeight: '500',
             fontSize: '0.875rem',
-            color: '#64748B',
-            border: '1px solid #E2E8F0',
+            color: '#5F6D64',
+            border: '1px solid #D0DCD4',
             cursor: 'pointer',
             outline: 'none',
             appearance: 'none',
             WebkitAppearance: 'none',
             MozAppearance: 'none',
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235F6D64' d='M2 4l4 4 4-4'/%3E%3C/svg%3E")`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right 10px center',
             paddingRight: '32px',
@@ -101,8 +101,8 @@ function ResultsView({
             fontSize: '0.875rem',
             fontWeight: '600',
             color: '#0F766E',
-            backgroundColor: '#F8FAFC',
-            border: '1px solid #E2E8F0',
+            backgroundColor: '#F0F4F1',
+            border: '1px solid #D0DCD4',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -111,9 +111,9 @@ function ResultsView({
             padding: '12px 24px',
             fontSize: '0.875rem',
             fontWeight: '500',
-            color: '#64748B',
-            backgroundColor: '#F8FAFC',
-            border: '1px solid #E2E8F0',
+            color: '#5F6D64',
+            backgroundColor: '#F0F4F1',
+            border: '1px solid #D0DCD4',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease'
@@ -140,8 +140,8 @@ function ResultsView({
         listPanel: {
             width: '440px',
             flexShrink: 0,
-            backgroundColor: '#FFFFFF',
-            borderRight: '1px solid #E2E8F0',
+            backgroundColor: '#E8EEEA',
+            borderRight: '1px solid #D0DCD4',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden'
@@ -149,14 +149,14 @@ function ResultsView({
         mapPanel: {
             flex: 1,
             padding: '20px',
-            backgroundColor: '#F8FAFC'
+            backgroundColor: '#F0F4F1'
         },
         mapContainer: {
             height: '100%',
             borderRadius: '20px',
             overflow: 'hidden',
-            boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)',
-            border: '1px solid #E2E8F0'
+            boxShadow: '0 10px 40px -10px rgba(0,0,0,0.12)',
+            border: '1px solid #D0DCD4'
         }
     };
 
